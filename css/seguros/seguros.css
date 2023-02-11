@@ -1,0 +1,70 @@
+.seguros-bg{
+    background-color: var(--cor-11);
+}
+
+.seguros{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.seguros h2{
+    grid-column: 1/-1;
+    justify-self: start;
+}
+
+.seguros-item{
+    background-color: var(--cor-12);
+    padding: 32px 32px 32px 60px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    border-radius: 5px;
+}
+
+.seguros-item h3{
+    margin-bottom: 40px;
+}
+
+.seguros-item span{
+    grid-column: 2;
+    display: block;/* para o preço{span1} ficar em cima do span2{'mensal'}. Sem o display:block eles ficam um ao lado do outro por ser um span*/
+    text-align: right;
+}
+
+.seguros-item ul{
+    grid-column: 1/-1;
+    margin-bottom: 32px;
+}
+
+.seguros-item li + li{ /* só adicionará se o li for seguido de um outro li*/
+    margin-top: 20px;
+}
+
+.seguros-item li{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.seguros-item li::before{
+    content: "";
+    display: inline-block;
+    width: 13px;
+    height: 9px;
+    background-image: url("../../img/icones/lista.svg");
+    position: absolute;
+    left: -21px;
+}
+
+.seguros-item a{
+    grid-column: 1/-1;
+}
+
+@media (max-width:800px){
+    .seguros{
+        grid-template-columns: 1fr;
+    }
+}

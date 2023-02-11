@@ -1,0 +1,58 @@
+.parceiros{
+    padding-top: 60px;
+    padding-top: 120px;
+}
+
+.parceiros h2{
+    margin-bottom: 56px;
+}
+
+.parceiros ul{
+    padding: 0 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.parceiros li{
+    padding: 32px;
+    display: flex;
+    border-left: 2px solid var(--cor-2);
+}
+
+.parceiros img{
+    margin: auto; /* alinhou as imagens verticalmente, o flex no elemento pai{li} é necessário */
+}
+
+.parceiros li:first-child, /* 1° e 5° filho */
+.parceiros li:nth-child(5){
+    border-left:none;
+}
+
+.parceiros li:nth-child(n + 5){ /* a partir do 5° filho */
+    border-top: 2px solid var(--cor-2);
+}
+
+@media (max-width: 800px){
+    .parceiros{
+        padding-bottom: 60px;
+    }
+    .parceiros h2{
+        margin-bottom: 20px;
+    }
+    .parceiros ul{
+        grid-template-columns: 1fr 1fr;
+    }
+    .parceiros li{
+        padding: 20px;
+        display: flex;
+    }
+    .parceiros li:nth-child(n + 3){ /* a partir do 5° filho */
+        border-top: 2px solid var(--cor-2);
+    }
+    .parceiros li:nth-child(odd){/*ímpares*/
+        border-left: none;
+    }
+}
+
