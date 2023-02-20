@@ -9,7 +9,7 @@ ul{
     list-style: none;
 }
 
-h1, ul, p, h3, h4, h2, blockquote{
+h1, ul, p, h3, h4, h2, blockquote, dd{
     margin: 0px;
 }
 
@@ -21,6 +21,7 @@ a{
 img{
     max-width: 100%;
     display: block;
+    height: auto;
 }
 
 img[src$=".jpg"]{ /* imagens que tenham source que terminam com .jpg */

@@ -1,5 +1,5 @@
 .introducao-bg{
-    background-color: var(--cor-12);
+    background: var(--cor-12) url("../../img/dec/bottom-left.svg") no-repeat bottom 160px left 40px;
     box-shadow: inset 0px -120px var(--cor-0); /* inset faz a sombra para dentro do container */
 }
 
@@ -27,7 +27,6 @@
     width: 100%;
     object-fit: cover;
 }
-
 
 @media (max-width:800px){
     .introducao-bg{
